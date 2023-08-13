@@ -890,6 +890,9 @@ function Spy:ButtonClicked(self, button)
 			else
 				if not InCombatLockdown() then
 					self:SetAttribute("macrotext", "/targetexact "..name)
+					if UnitName("target") == name then
+						this:SetAttribute("macrotext", "/click MultiBarBottomLeftButton1")
+					end
 				end	
 			end
 		elseif button == "RightButton" then
