@@ -890,8 +890,8 @@ function Spy:ButtonClicked(self, button)
 			else
 				if not InCombatLockdown() then
 					self:SetAttribute("macrotext", "/targetexact "..name)
-					if UnitName("target") == name then
-						this:SetAttribute("macrotext", "/click MultiBarBottomLeftButton1")
+					if UnitName("target") == name and Spy.db.profile.InputMacros ~= "" then
+						this:SetAttribute("macrotext", Spy.db.profile.InputMacros)
 					end
 				end	
 			end
