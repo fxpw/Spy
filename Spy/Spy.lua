@@ -1156,6 +1156,17 @@ Spy.options = {
 						end
 					end,
 				},
+				InputVariable = {
+					name = L["InputMacros"],
+					desc = L["InputMacrosDescription"],
+					type = "input",
+					order = 13,
+					width = "full",
+					get = function(info) return "" end,
+					set = function(info, value)
+						Spy.db.profile.InputMacros = value
+					end,
+				},
 			},
 		},
 	},
